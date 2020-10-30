@@ -1,4 +1,4 @@
-# Frontend Mentor - Job Listings Challenge
+# Frontend Mentor - Static Listings Challenge
 
 ![Design preview for the Job Listings coding challenge](./src/assets/design/desktop-preview.jpg)
 
