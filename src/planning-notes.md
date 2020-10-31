@@ -15,11 +15,12 @@
     - (Layout)
       - Banner.js
 
-    - (Job Postings)
+    - (Job Listings)
       - Filter.js (form) -- {{ w/ state/class component }}
-      - JobCard.js (parent) -- {{ maybe w/state -- start off as a class component }}
-        - JobInfoSection.js (child) -- {{ stateless/functional }}
-        - JobCategorySection.js (child) -- {{ stateless/functional }}
+      - JobListings.js (parent) -- {{ maybe w/state -- start off as a class component }}
+        - JobCard.js (child) -- {{ stateless/functional }}
+          - JobInfoSection.js (place in JobCard) -- {{ stateless/functional }}
+          - JobCategorySection.js (place in JobCard) -- {{ stateless/functional }}
 
 - [] One major container component that holds the other components for easy resizing and breakpoint management.
   - [] Background color: Light Grayish Cyan (Background): hsl(180, 52%, 96%).
@@ -29,12 +30,13 @@
     - [] Add the background image (bg-header-desktop)
 
   - [] Loop through jobs and add a job card component for each.
-    - 
-    - [] Use two components for each job card to add two sections the desired info.
-      - [] for Desktop, side-by-side?
-      - [] for Mobile, top-and-bottom with a divider?
+    - [] Add a JobListings container to hold all job listings.
+      - [] Each Job listing should be represented by a JobCard component.
+        - [] Use two components for each job card to add two sections the desired info.
+          - [] for Desktop, side-by-side?
+          - [] for Mobile, top-and-bottom with a divider?
 
-      - [] (left or top) JobInfoSection holds the company's logo image (circular)
-      - [] (right or bottom) JobCategorySection hold details for each of the categories.
-        - [] Each of these categories might need to be a mini component as well.
-  - 
+          - [] (left or top) JobInfoSection holds the company's logo image (circular)
+          - [] (right or bottom) JobCategorySection hold details for each of the categories.
+            - [] Each of these categories might need to be a mini component as well.
+  
