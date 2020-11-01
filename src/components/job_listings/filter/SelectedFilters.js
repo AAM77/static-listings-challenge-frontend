@@ -10,7 +10,7 @@ class SelectedFilters extends Component {
     render() {
         return (
             <div className="container">
-                <div className="card selected-filters shadow">
+                <div className="card filter-display-card shadow">
                     <ClearButton />
                 </div>
                 
