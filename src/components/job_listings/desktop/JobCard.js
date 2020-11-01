@@ -1,12 +1,13 @@
 import React from 'react';
 import JobLogo from './JobLogo';
+import JobInfoSection from './JobInfoSection';
 
 
 function JobCard({ jobListing }) {
     return(
         <div key={jobListing.id} className='card shadow'>
             <JobLogo logoPath={jobListing.logo} />
-            <div>{jobListing.company}</div>
+            <JobInfoSection jobListing={jobListing} />
         </div>
     );
 }
