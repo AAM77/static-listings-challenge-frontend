@@ -17,11 +17,11 @@ const JobCategorySection = ({ jobListing }) => {
             if (categories.includes(category)) {
                 if (category === 'languages' || category === 'tools') {
                     skillSet.forEach( (skillName) => {
-                        skillList.push(skillName);
+                        skillList.push([category, skillName]);
                     })
                 }
                 else {
-                    skillList.push(skillSet);
+                    skillList.push([category, skillSet]);
                 }
             }
         });
@@ -31,8 +31,8 @@ const JobCategorySection = ({ jobListing }) => {
 
     const createJobSkillTablets = () => {
         // NOTE: Need to make keys unique.
-        return getSkillList().map( (skillName, index) => {
-            return <JobSkillTablet key={index} skillName={skillName} />
+        return getSkillList().map( (skillTuple, index) => {
+            return <JobSkillTablet key={index} categoryName={skillTuple[0]} skillName={skillTuple[1]} />
         })
     }
 
