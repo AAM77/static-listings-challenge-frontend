@@ -438,16 +438,20 @@ table th {
   border-radius: 10px;
   max-height: 230px;
   margin-bottom: 2.5rem;
-  overflow: hidden;
 }
 
 .shadow {
   box-shadow: 0px 15px 50px -15px hsl(180, 29%, 75%);
 }
 
-#logo {
-  width: 133px;
-  height: 133px;
+.logo {
+  width: 20%;
+  height: 20%;
+
+  .image-container {
+    width: 133px;
+    height: 133px;
+  }
 
   img {
     max-width: 100%;
@@ -460,7 +464,6 @@ table th {
   width: 36.5rem;
   max-width: 100%;
   margin-left: 2.8rem;
-  // padding: 5px 0px 5px 0px;
   justify-content: space-evenly;
   flex-direction: column;
 
@@ -485,5 +488,29 @@ table th {
   .interpunct {
     margin: 0px 25px 0px 25px;
     font-weight: 900;
+  }
+}
+
+.category-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-flow: row-reverse;
+  width: 100%;
+  max-width: 100%;
+
+  .skill-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+    padding: 9.5px;
+    width: auto;
+    height: 38px;
+    border-radius: 5px;
+    margin: 0px 0px 0px 25px;
+    background: hsl(180, 52%, 96%);
   }
 }
