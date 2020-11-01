@@ -433,11 +433,13 @@ table th {
   display: flex;
   background: white;
   padding: 2.6rem 3.2rem 2.6rem 3.2rem;
-  border: #ccc 1px;
-  border-left: thick green 5px;
-  border-radius: 10px;
+  border-radius: 7px;
   max-height: 230px;
   margin-bottom: 2.5rem;
+}
+
+.featured-listing {
+  border-left: 2mm solid hsl(180, 29%, 50%);
 }
 
 .shadow {
@@ -461,16 +463,50 @@ table th {
 
 .job-info {
   display: flex;
-  width: 36.5rem;
+  width: 100%;
   max-width: 100%;
-  margin-left: 2.8rem;
+  margin-left: 1.5rem;
   justify-content: space-evenly;
   flex-direction: column;
 
-  .company {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: hsl(180, 29%, 50%);
+  .company-and-tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .company {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: hsl(180, 29%, 50%);
+    }
+
+    .tags {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 5px;
+
+      .featured {
+        background: hsl(180, 14%, 20%);
+      }
+
+      .new {
+        background: hsl(180, 29%, 50%);
+      }
+
+      .job-listing-tag {
+        height: auto;
+        border-radius: 100px;
+        margin-left: 10px;
+        padding: 4px 10px 4px 10px;
+
+        span {
+          height: auto;
+          color: white;
+          font-weight: 600;
+        }
+      }
+    }
   }
 
   .position {
