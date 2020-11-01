@@ -416,6 +416,10 @@ table th {
 
 .App {
   background: hsl(180, 52%, 96%);
+
+  .attribution.footer {
+    margin-bottom: 1rem;
+  }
 }
 
 #banner {
