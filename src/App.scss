@@ -10,6 +10,7 @@ $spartan: "Spartan", sans-serif;
 // Primary Color
 $desaturated-dark-cyan: hsl(180, 29%, 50%);
 
+// Secondary & Tertiary Colors
 $light-grayish-cyan-background: hsl(180, 52%, 96%);
 $light-grayish-cyan-filter-tablet: hsl(180, 31%, 95%);
 $dark-grayish-cyan: hsl(180, 8%, 52%);
@@ -425,7 +426,7 @@ table th {
 }
 
 .App {
-  background: hsl(180, 52%, 96%);
+  background: $light-grayish-cyan-background;
 
   .attribution.footer {
     margin-bottom: 1rem;
@@ -483,7 +484,7 @@ table th {
         height: 38px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
-        background: hsl(180, 52%, 96%);
+        background: $light-grayish-cyan-background;
       }
 
       .remove-button {
@@ -518,10 +519,10 @@ table th {
   width: auto;
   height: auto;
   font-family: $spartan;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-decoration: underline;
-  color: hsl(180, 14%, 20%);
+  color: $very-dark-grayish-cyan;
 
   &:hover {
     cursor: pointer;
@@ -578,7 +579,7 @@ table th {
       margin-left: 5px;
 
       .featured {
-        background: hsl(180, 14%, 20%);
+        background: $very-dark-grayish-cyan;
       }
 
       .new {
@@ -603,7 +604,7 @@ table th {
   .position {
     font-size: 1.5rem;
     font-weight: 700;
-    color: hsl(180, 14%, 20%);
+    color: $very-dark-grayish-cyan;
 
     &:hover {
       cursor: pointer;
@@ -614,7 +615,7 @@ table th {
   .additional-details {
     font-size: 1.1rem;
     font-weight: 500;
-    color: hsl(180, 8%, 52%);
+    color: $dark-grayish-cyan;
   }
 
   .interpunct {
@@ -643,7 +644,7 @@ table th {
     height: 38px;
     border-radius: 5px;
     margin: 0px 0px 0px 25px;
-    background: hsl(180, 52%, 96%);
+    background: $light-grayish-cyan-background;
 
     &:hover {
       cursor: pointer;
