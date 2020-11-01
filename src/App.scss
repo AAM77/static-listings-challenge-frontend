@@ -1,4 +1,9 @@
+/* Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.google.com/specimen/Spartan");
+
+$roboto: "Roboto", serif;
+$spartan: "Spartan", sans-serif;
 
 /* Global Styles */
 :root {
@@ -16,11 +21,10 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-family: $spartan;
+  font-size: 0.938rem;
   line-height: 1.6;
   background-color: #fff;
-  color: #333;
 }
 
 a {
@@ -453,9 +457,33 @@ table th {
 
 .job-info {
   display: flex;
-  width: auto;
+  width: 36.5rem;
   max-width: 100%;
   margin-left: 2.8rem;
-  justify-content: space-between;
+  // padding: 5px 0px 5px 0px;
+  justify-content: space-evenly;
   flex-direction: column;
+
+  .company {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+  }
+
+  .position {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(180, 14%, 20%);
+  }
+
+  .additional-details {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: hsl(180, 8%, 52%);
+  }
+
+  .interpunct {
+    margin: 0px 25px 0px 25px;
+    font-weight: 900;
+  }
 }

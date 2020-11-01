@@ -4,10 +4,10 @@ import React from 'react';
 const JobInfoSection = ({ jobListing }) => {
     return (
         <div className='job-info'>
-            <div>Company Name</div>
-            <div>Job Title</div>
-            <div className='bottom'>
-                Post Date · Job Type · Location
+            <div className='company'>{jobListing.company}</div>
+            <div className='position'>{jobListing.position}</div>
+            <div className='additional-details'>
+                {jobListing.postedAt}<span className='interpunct'>·</span>{jobListing.contract}<span className='interpunct'>·</span>{jobListing.location}
             </div>
         </div>
     )
