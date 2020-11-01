@@ -13,8 +13,14 @@ class SelectedFilters extends Component {
             {category:'tools', skillName: 'React'}, 
             {category: 'role', skillName: 'Fullstack'},
             {category: 'something', skillName: 'Python'}
-        ]   // NOTE: Currently has mock data for building out the UI and testing behavior.
+        ],   // NOTE: Currently has mock data for building out the UI and testing behavior.
             // Should be an array of objects that contain both the category and the skill name.
+        
+        isEmpty: true,
+    }
+
+    componentDidMount = () => {
+       this.setState({isEmpty: this.state.selectedFilters.length ? false : true});
     }
 
     getDistinctSelectedFilters = () => {
@@ -52,8 +58,21 @@ class SelectedFilters extends Component {
     }
 
     render() {
+        let componentClass;
+
+        switch (this.state.isEmpty) {
+            case true:
+                componentClass = 'hidden';
+                break;
+            default:
+                break;
+        }
+
         return (
-            <div className="container">
+            /* Mohammad Adeel - November 1, 2020. Using the 'display' style attribute instead of 'visibility'
+            so that it treats a hidden element as if it does not exist. This way, the layout of the 
+            remaining elements adjusts accordingly, depending on whether it is hidden or not. */
+            <div className={"container filter-container " + componentClass} style={{ display: this.state.isEmpty && 'none' }}>
                 <div className="card filter-display-card shadow">
                     <div className='selected-filters'>
                         {this.addFilterTablets()}
