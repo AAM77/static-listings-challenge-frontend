@@ -455,13 +455,68 @@ table th {
 .filter-display-card {
   display: flex;
   background: white;
-  padding: 1.7rem 3.2rem 1.7rem 3.2rem;
+  padding: 1rem 3.2rem 1rem 3.2rem;
   width: 100%;
+
+  .selected-filters {
+    padding: 0.7rem 1rem 0.7rem 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    .filter-tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0px 25px 0px 0px;
+
+      .skill-tablet {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $desaturated-dark-cyan;
+        padding: 9.5px;
+        width: auto;
+        height: 38px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background: hsl(180, 52%, 96%);
+      }
+
+      .remove-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $desaturated-dark-cyan;
+        padding: 9.5px;
+        width: auto;
+        height: 38px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: $desaturated-dark-cyan;
+        color: white;
+
+        &:hover {
+          cursor: pointer;
+          background: $very-dark-grayish-cyan;
+          color: white;
+        }
+      }
+    }
+  }
 }
 
 .clear-button {
+  display: flex;
+  align-items: center;
   margin-left: auto;
   width: auto;
+  height: auto;
   font-family: $spartan;
   font-size: 1.5rem;
   font-weight: 700;
