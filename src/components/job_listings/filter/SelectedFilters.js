@@ -1,29 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ClearButton from './ClearButton';
 import FilterTablet from './FilterTablet';
 
 
-class SelectedFilters extends Component {
-    state = {
-        selectedFilters: [
-            {category:'tools', skillName: 'React'}, 
-            {category: 'role', skillName: 'Fullstack'}, 
-            {category:'tools', skillName: 'React'}, 
-            {category: 'role', skillName: 'Fullstack'}, 
-            {category:'tools', skillName: 'React'}, 
-            {category: 'role', skillName: 'Fullstack'},
-            {category: 'something', skillName: 'Python'}
-        ],   // NOTE: Currently has mock data for building out the UI and testing behavior.
-            // Should be an array of objects that contain both the category and the skill name.
-        
-        isEmpty: true,
-    }
+const SelectedFilters = ({ selectedFilters, isEmpty }) => {
 
-    componentDidMount = () => {
-       this.setState({isEmpty: this.state.selectedFilters.length ? false : true});
-    }
-
-    getDistinctSelectedFilters = () => {
+    const getDistinctSelectedFilters = () => {
         /*
         Mohammad Adeel - November 1, 2020
         Uses the selectedFilters from the state to return a list of unique filter selections.
@@ -32,7 +14,7 @@ class SelectedFilters extends Component {
         */
         const distinctSelectedFilters = [];
         const mappedFilters = new Map();
-        for (const selectedFilter of this.state.selectedFilters) {
+        for (const selectedFilter of selectedFilters) {
             if(!mappedFilters.has(selectedFilter.skillName)){
                 mappedFilters.set(selectedFilter.skillName, true);    // set any value to Map
                 distinctSelectedFilters.push({
@@ -45,44 +27,42 @@ class SelectedFilters extends Component {
         return distinctSelectedFilters;
     }
 
-    addFilterTablets = () => {
+    let componentClass;
+
+    switch (isEmpty) {
+        case true:
+            componentClass = 'hidden';
+            break;
+        default:
+            break;
+    }
+
+    const addFilterTablets = () => {
         /*
         Mohammad Adeel - November 1, 2020
         Uses the list of distinct/unique selectedFilters from this.getDistinctSelectedFilters
         to create and return a list of FilterTablet components, which get added to the SelectedFilters
         component.
         */
-        return this.getDistinctSelectedFilters().map( (selectedFilter, index) => (
+        return getDistinctSelectedFilters().map( (selectedFilter, index) => (
             <FilterTablet key={index} category={selectedFilter.category} skillName={selectedFilter.skillName} />
         ))
     }
 
-    render() {
-        let componentClass;
-
-        switch (this.state.isEmpty) {
-            case true:
-                componentClass = 'hidden';
-                break;
-            default:
-                break;
-        }
-
-        return (
-            /* Mohammad Adeel - November 1, 2020. Using the 'display' style attribute instead of 'visibility'
-            so that it treats a hidden element as if it does not exist. This way, the layout of the 
-            remaining elements adjusts accordingly, depending on whether it is hidden or not. */
-            <div className={"container filter-container " + componentClass} style={{ display: this.state.isEmpty && 'none' }}>
-                <div className="card filter-display-card shadow">
-                    <div className='selected-filters'>
-                        {this.addFilterTablets()}
-                    </div>
-                    <ClearButton />
+    return (
+        /* Mohammad Adeel - November 1, 2020. Using the 'display' style attribute instead of 'visibility'
+        so that it treats a hidden element as if it does not exist. This way, the layout of the 
+        remaining elements adjusts accordingly, depending on whether it is hidden or not. */
+        <div className={"container filter-container " + componentClass} style={{ display: isEmpty && 'none' }}>
+            <div className="card filter-display-card shadow">
+                <div className='selected-filters'>
+                    {addFilterTablets()}
                 </div>
-                
+                <ClearButton />
             </div>
-        );
-    }
+            
+        </div>
+    );
 }
 
 export default SelectedFilters;
