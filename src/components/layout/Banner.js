@@ -1,11 +1,11 @@
 import React from 'react';
-import banner from '../../assets/images/bg-header-desktop.svg';
+import banner from './bg-header-desktop.svg';
 
 
 const Banner = () => {
     return (
         <div id='banner'>
-            <img src={banner}></img>
+            <img src={banner} alt="cyan page banner"></img>
         </div>
     )
 }
