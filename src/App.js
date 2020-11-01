@@ -9,7 +9,22 @@ import SelectedFilters from './components/job_listings/filter/SelectedFilters';
 class App extends Component {
   state = {
     jobListings: data,
+    selectedFilters: [
+      {category:'tools', skillName: 'React'}, 
+      {category: 'role', skillName: 'Fullstack'}, 
+      {category:'tools', skillName: 'React'}, 
+      {category: 'role', skillName: 'Fullstack'}, 
+      {category:'tools', skillName: 'React'}, 
+      {category: 'role', skillName: 'Fullstack'},
+      {category: 'something', skillName: 'Python'}
+    ],  // NOTE: Currently has mock data for building out the UI and testing behavior.
+        // Should be an array of objects that contain both the category and the skill name.
+    isEmpty: true,
   }
+
+  componentDidMount = () => {
+    this.setState({isEmpty: this.state.selectedFilters.length ? false : true});
+ }
 
   filterSelectionHandler = (e) => {
 
@@ -21,7 +36,7 @@ class App extends Component {
     return (
       <div className="App">
         <Banner />
-        <SelectedFilters />
+        <SelectedFilters selectedFilters={this.state.selectedFilters} isEmpty={this.state.isEmpty} />
         <JobListings jobListings={jobListings} />
 
         <div class="attribution footer">
