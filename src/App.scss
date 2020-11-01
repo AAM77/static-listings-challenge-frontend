@@ -424,10 +424,26 @@ table th {
   }
 }
 
+/* Cards */
+.card {
+  display: flex;
+  background: white;
+  padding: 2.6rem 3.2rem 2.6rem 3.2rem;
+  border: #ccc 1px;
+  border-left: thick green 5px;
+  border-radius: 10px;
+  max-height: 230px;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+.shadow {
+  box-shadow: 0px 15px 50px -15px hsl(180, 29%, 75%);
+}
+
 #logo {
-  max-width: 133px;
-  max-height: 133px;
-  margin-left: 2.2rem;
+  width: 133px;
+  height: 133px;
 
   img {
     max-width: 100%;
@@ -435,18 +451,11 @@ table th {
   }
 }
 
-/* Cards */
-.card {
-  background: white;
-  padding: 1rem;
-  border: #ccc 1px;
-  border-left: thick green 5px;
-  border-radius: 10px;
-  max-height: 192px;
-
-  margin-bottom: 2.5rem;
-}
-
-.shadow {
-  box-shadow: 0px 15px 50px -15px hsl(180, 29%, 75%);
+.job-info {
+  display: flex;
+  width: auto;
+  max-width: 100%;
+  margin-left: 2.8rem;
+  justify-content: space-between;
+  flex-direction: column;
 }
