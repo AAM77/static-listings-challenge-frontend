@@ -1,5 +1,5 @@
 # I am currently working on this. To check out how the current version of the project looks like, please visit:
-https://static-listings-frontend-awydqsj06.vercel.app/
+https://static-job-listings-frontend-git-main.aam77.vercel.app/
 
 -------------------------------------------------------------------------------
 
