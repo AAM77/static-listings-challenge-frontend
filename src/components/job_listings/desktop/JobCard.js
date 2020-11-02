@@ -4,7 +4,7 @@ import JobInfoSection from './JobInfoSection';
 import JobCategorySection from './JobCategorySection';
 
 
-function JobCard({ jobListing }) {
+function JobCard({ jobListing, selectFilter }) {
     let componentClass = '';
 
     switch (jobListing.featured) {
@@ -19,7 +19,7 @@ function JobCard({ jobListing }) {
         <div key={jobListing.id} className={componentClass + ' card shadow'}>
             <JobLogo logoPath={jobListing.logo} />
             <JobInfoSection jobListing={jobListing} />
-            <JobCategorySection jobListing={jobListing} />
+            <JobCategorySection jobListing={jobListing} selectFilter={selectFilter} />
         </div>
     );
 }
