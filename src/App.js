@@ -38,7 +38,7 @@ class App extends Component {
       <div className="App">
         <Banner />
         <SelectedFilters selectedFilters={this.state.selectedFilters} isFilters={this.state.isSelectedFilters} />
-        <JobListings jobListings={jobListings} selectFilter={this.addFilterToState} />
+        <JobListings jobListings={jobListings} selectFilter={this.addFilterToState} selectedFilters={this.state.selectedFilters} />
 
         <div class="attribution footer">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">Frontend Mentor</a>. 
