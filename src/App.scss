@@ -5,6 +5,12 @@
 $roboto: "Roboto", serif;
 $spartan: "Spartan", sans-serif;
 
+$large-desktop: 1440px;
+$small-desktop: 1024px;
+$tablet: 768px;
+$large-phone: 640px;
+$small-phone: 347px;
+
 /* Color Palette */
 
 // Primary Color
@@ -429,7 +435,7 @@ table th {
   background: $light-grayish-cyan-background;
 
   .attribution.footer {
-    margin-bottom: 1rem;
+    padding: 1rem;
   }
 }
 
