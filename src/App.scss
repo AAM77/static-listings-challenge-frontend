@@ -433,6 +433,10 @@ table th {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 #banner {
   background: $desaturated-dark-cyan;
   margin-bottom: 4rem;

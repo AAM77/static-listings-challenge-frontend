@@ -3,7 +3,7 @@ import ClearButton from './ClearButton';
 import FilterTablet from './FilterTablet';
 
 
-const SelectedFilters = ({ selectedFilters, isEmpty }) => {
+const SelectedFilters = ({ selectedFilters, isFilters }) => {
 
     const getDistinctSelectedFilters = () => {
         /*
@@ -27,16 +27,6 @@ const SelectedFilters = ({ selectedFilters, isEmpty }) => {
         return distinctSelectedFilters;
     }
 
-    let componentClass;
-
-    switch (isEmpty) {
-        case true:
-            componentClass = 'hidden';
-            break;
-        default:
-            break;
-    }
-
     const addFilterTablets = () => {
         /*
         Mohammad Adeel - November 1, 2020
@@ -53,7 +43,7 @@ const SelectedFilters = ({ selectedFilters, isEmpty }) => {
         /* Mohammad Adeel - November 1, 2020. Using the 'display' style attribute instead of 'visibility'
         so that it treats a hidden element as if it does not exist. This way, the layout of the 
         remaining elements adjusts accordingly, depending on whether it is hidden or not. */
-        <div className={"container filter-container " + componentClass} style={{ display: isEmpty && 'none' }}>
+        <div id='selected-filters-container' className={`container ${isFilters ? '' : 'hidden'}` }>
             <div className="card filter-display-card shadow">
                 <div className='selected-filters'>
                     {addFilterTablets()}

@@ -2,10 +2,10 @@ import React from 'react';
 import JobCard from './JobCard';
 
 
-const JobListings = ({ jobListings }) => {
+const JobListings = ({ jobListings, selectFilter }) => {
     return (
         <div className='container' id='job-listings'>
-            { jobListings.map( jobListing => <JobCard jobListing={jobListing}  />) }
+            { jobListings.map( jobListing => <JobCard jobListing={jobListing} selectFilter={selectFilter}  />) }
         </div>
     );
 }
