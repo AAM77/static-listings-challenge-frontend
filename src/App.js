@@ -43,6 +43,12 @@ class App extends Component {
      this.setState({selectedFilters: selectedFilters, isSelectedFilters: isFilters});
   }
 
+  clearSelectedFilters = () => {
+    const newSelectedFilters = [];
+    const isFilters = newSelectedFilters.length > 0 ? true : false;
+    this.setState({selectedFilters: newSelectedFilters, isSelectedFilters: isFilters});
+  }
+
   componentDidMount = () => {
     this.setSelectedFiltersStatus();
   }
@@ -53,7 +59,7 @@ class App extends Component {
     return (
       <div className="App">
         <Banner />
-        <SelectedFilters selectedFilters={this.state.selectedFilters} isFilters={this.state.isSelectedFilters} removeFilter={this.removeFilterFromState} />
+        <SelectedFilters selectedFilters={this.state.selectedFilters} isFilters={this.state.isSelectedFilters} removeFilter={this.removeFilterFromState} clearFilters={this.clearSelectedFilters} />
         <JobListings jobListings={jobListings} selectFilter={this.addFilterToState} selectedFilters={this.state.selectedFilters} />
 
         <div class="attribution footer">

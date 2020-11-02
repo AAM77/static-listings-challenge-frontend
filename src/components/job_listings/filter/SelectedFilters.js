@@ -3,7 +3,7 @@ import ClearButton from './ClearButton';
 import FilterTablet from './FilterTablet';
 
 
-const SelectedFilters = ({ selectedFilters, isFilters, removeFilter }) => {
+const SelectedFilters = ({ selectedFilters, isFilters, removeFilter, clearFilters }) => {
 
     const getDistinctSelectedFilters = () => {
         /*
@@ -48,7 +48,7 @@ const SelectedFilters = ({ selectedFilters, isFilters, removeFilter }) => {
                 <div className='selected-filters'>
                     {addFilterTablets()}
                 </div>
-                <ClearButton />
+                <ClearButton clearFilters={clearFilters} />
             </div>
             
         </div>
