@@ -296,9 +296,9 @@
 
   .category-section {
     display: flex;
+    flex: 1 0;
     flex-direction: row;
     align-items: center;
-    flex-flow: row-reverse;
     width: 100%;
     max-width: 100%;
 
