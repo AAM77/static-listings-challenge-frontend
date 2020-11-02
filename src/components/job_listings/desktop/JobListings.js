@@ -31,7 +31,7 @@ const JobListings = ({ jobListings, selectFilter, selectedFilters }) => {
 
     return (
         <div className='container' id='job-listings'>
-            { getFilteredJobListings().map( jobListing => <JobCard jobListing={jobListing} selectFilter={selectFilter}  />) }
+            { getFilteredJobListings().map( (jobListing, index) => <JobCard key={`${index}${jobListing.company}${jobListing.postedAt}${jobListing.id}`} jobListing={jobListing} selectFilter={selectFilter}  />) }
         </div>
     );
 }

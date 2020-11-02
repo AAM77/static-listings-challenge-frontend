@@ -17,23 +17,21 @@ const JobCategorySection = ({ jobListing, selectFilter }) => {
             if (categories.includes(category)) {
                 if (category === 'languages' || category === 'tools') {
                     skillSet.forEach( (skillName) => {
-                        // NOTE: Mohammad Adeel - November 1, 2020. Use an object instead of a 'tuple.'
-                        skillList.push([category, skillName]);
+                        skillList.push({category: category, skillName: skillName});
                     })
                 }
                 else {
-                    skillList.push([category, skillSet]);
+                    skillList.push({category: category, skillName: skillSet});
                 }
             }
         });
-
         return skillList;
     }
 
     const createJobSkillTablets = () => {
         // NOTE: Need to make keys unique.
-        return getSkillList().map( (skillTuple, index) => {
-            return <JobSkillTablet key={index} categoryName={skillTuple[0]} skillName={skillTuple[1]} selectFilter={selectFilter} />
+        return getSkillList().map( (skillObject, index) => {
+            return <JobSkillTablet key={`${skillObject.category}${index}${skillObject.skillName}`} category={skillObject.category} skillName={skillObject.skillName} selectFilter={selectFilter} />
         })
     }
 

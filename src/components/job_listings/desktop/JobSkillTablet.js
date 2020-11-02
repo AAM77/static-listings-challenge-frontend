@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-const JobSkillTablet = ({ categoryName, skillName, selectFilter }) => {
+const JobSkillTablet = ({ category, skillName, selectFilter }) => {
 
     return (
-        <div className="skill-tablet" data-category={categoryName} data-skillName={skillName} onClick={selectFilter}>
-            <span data-category={categoryName} data-skillName={skillName}>{skillName}</span>
+        <div className="skill-tablet" data-category={category} data-skillname={skillName} onClick={selectFilter}>
+            <span data-category={category} data-skillname={skillName}>{skillName}</span>
         </div>
     )
 }

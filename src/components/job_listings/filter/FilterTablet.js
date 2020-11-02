@@ -5,7 +5,7 @@ import RemoveButton from './RemoveButton';
 
 const FilterTablet = ({ category, skillName, removeFilter }) => {
     return (
-        <div class='filter-tablet'>
+        <div className='filter-tablet'>
             <JobSkillTablet categore={category} skillName={skillName} />
             <RemoveButton category={category} skillName={skillName} removeFilter={removeFilter} />
         </div>
