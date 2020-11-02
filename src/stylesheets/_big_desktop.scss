@@ -1,24 +1,4 @@
-@media only screen and (min-width: 1200px) {
-  body {
-    font-family: $spartan;
-    font-size: 0.938rem;
-    line-height: 1.6;
-    background-color: #fff;
-  }
-
-  a {
-    color: var(--primary-color);
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #666;
-  }
-
-  img {
-    width: 100%;
-  }
-
+@media only screen and (min-width: 1400px) {
   /* Utilities */
   .container {
     max-width: 1440px;
@@ -26,6 +6,7 @@
     overflow: hidden;
     padding: 0 2rem;
   }
+
   .App {
     background: $light-grayish-cyan-background;
 
@@ -176,7 +157,9 @@
     height: 20%;
 
     .image-container {
-      width: 133px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 133px;
     }
 
@@ -190,7 +173,7 @@
     display: flex;
     width: 100%;
     max-width: 100%;
-    margin-left: 1.5rem;
+    margin-left: 0.5rem;
     justify-content: space-evenly;
     flex-direction: column;
 
@@ -296,10 +279,8 @@
 
   .category-section {
     display: flex;
-    flex: 1 0;
     flex-direction: row;
     align-items: center;
-    width: 100%;
     max-width: 100%;
 
     .skill-tablet {
