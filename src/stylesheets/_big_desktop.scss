@@ -21,12 +21,11 @@
 
   #banner {
     background: $desaturated-dark-cyan;
-
     margin-bottom: 4rem;
 
     img {
       max-height: 100%;
-      max-width: 100%;
+      width: 100%;
       display: block;
     }
   }
@@ -37,7 +36,7 @@
     background: white;
     padding: 2.6rem 3.2rem 2.6rem 3.2rem;
     border-radius: 7px;
-    max-height: 230px;
+    max-height: 100%;
     margin-bottom: 2.5rem;
 
     @include responsive(small-phone) {
@@ -45,100 +44,6 @@
       padding: 0.44rem 0.54rem 0.44rem 0.54rem;
       margin-bottom: 2rem;
       height: 150px;
-    }
-  }
-
-  .filter-display-card {
-    display: flex;
-    flex-wrap: wrap;
-    background: white;
-    padding: 1rem 3.2rem 1rem 3.2rem;
-    max-width: 100%;
-
-    @include responsive(small-phone) {
-      padding: 0.25rem 1rem 0.25rem 1rem;
-    }
-
-    .selected-filters {
-      padding: 0.7rem 1rem 0.7rem 0rem;
-      display: flex;
-      flex: 1;
-      flex-wrap: wrap;
-      flex-direction: row;
-      align-items: center;
-      max-width: 100%;
-
-      .filter-tablet {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 12px 25px 12px 0px;
-
-        @include responsive(small-phone) {
-          margin: 4px 6px 4px 0px;
-        }
-
-        .skill-tablet,
-        .remove-button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.1rem;
-          font-weight: 700;
-          padding: 9.5px;
-          width: auto;
-          height: 38px;
-
-          @include responsive(small-phone) {
-            font-size: 43.75%;
-            font-weight: 700;
-            padding: 3px 4.75px;
-            width: auto;
-            height: 20%;
-          }
-        }
-        .skill-tablet {
-          border-top-left-radius: 5px;
-          border-bottom-left-radius: 5px;
-          background: $light-grayish-cyan-background;
-          color: $desaturated-dark-cyan;
-        }
-
-        .remove-button {
-          border-top-right-radius: 5px;
-          border-bottom-right-radius: 5px;
-          background: $desaturated-dark-cyan;
-          color: white;
-
-          &:hover {
-            cursor: pointer;
-            background: $very-dark-grayish-cyan;
-            color: white;
-          }
-        }
-      }
-    }
-  }
-
-  .clear-button {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    width: auto;
-    height: auto;
-    font-family: $spartan;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: $very-dark-grayish-cyan;
-
-    @include responsive(small-phone) {
-      font-size: 43.75%;
-    }
-
-    &:hover {
-      cursor: pointer;
-      text-decoration: underline;
-      color: $desaturated-dark-cyan;
     }
   }
 
@@ -313,6 +218,100 @@
         background: $desaturated-dark-cyan;
         color: white;
       }
+    }
+  }
+
+  .filter-display-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    padding: 1rem 3.2rem 1rem 3.2rem;
+    max-width: 100%;
+
+    @include responsive(small-phone) {
+      padding: 0.25rem 1rem 0.25rem 1rem;
+    }
+
+    .selected-filters {
+      padding: 0.7rem 1rem 0.7rem 0rem;
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      max-width: 100%;
+
+      .filter-tablet {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 12px 25px 12px 0px;
+
+        @include responsive(small-phone) {
+          margin: 4px 6px 4px 0px;
+        }
+
+        .skill-tablet,
+        .remove-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.1rem;
+          font-weight: 700;
+          padding: 9.5px;
+          width: auto;
+          height: 38px;
+
+          @include responsive(small-phone) {
+            font-size: 43.75%;
+            font-weight: 700;
+            padding: 3px 4.75px;
+            width: auto;
+            height: 20%;
+          }
+        }
+        .skill-tablet {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          background: $light-grayish-cyan-background;
+          color: $desaturated-dark-cyan;
+        }
+
+        .remove-button {
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          background: $desaturated-dark-cyan;
+          color: white;
+
+          &:hover {
+            cursor: pointer;
+            background: $very-dark-grayish-cyan;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .clear-button {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    font-family: $spartan;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $very-dark-grayish-cyan;
+
+    @include responsive(small-phone) {
+      font-size: 43.75%;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: $desaturated-dark-cyan;
     }
   }
 }
