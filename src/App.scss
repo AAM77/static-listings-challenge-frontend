@@ -456,6 +456,7 @@ table th {
 /* Cards */
 .card {
   display: flex;
+
   background: white;
   padding: 2.6rem 3.2rem 2.6rem 3.2rem;
   border-radius: 7px;
@@ -465,28 +466,33 @@ table th {
 
 .filter-display-card {
   display: flex;
+  flex-wrap: wrap;
   background: white;
   padding: 1rem 3.2rem 1rem 3.2rem;
-  width: 100%;
+  max-width: 100%;
 
   .selected-filters {
     padding: 0.7rem 1rem 0.7rem 0rem;
     display: flex;
+    flex: 1;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    max-width: 100%;
+    max-height: auto;
 
     .filter-tablet {
       display: flex;
+      flex-shrink: 0;
       flex-direction: row;
       align-items: center;
-      margin: 0px 25px 0px 0px;
+      margin: 12px 25px 12px 0px;
 
       .skill-tablet {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.1rem;
+        font-size: auto;
         font-weight: 700;
         color: $desaturated-dark-cyan;
         padding: 9.5px;
@@ -531,11 +537,12 @@ table th {
   font-family: $spartan;
   font-size: 1.2rem;
   font-weight: 700;
-  text-decoration: underline;
+
   color: $very-dark-grayish-cyan;
 
   &:hover {
     cursor: pointer;
+    text-decoration: underline;
     color: $desaturated-dark-cyan;
   }
 }
