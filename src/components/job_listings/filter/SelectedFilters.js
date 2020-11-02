@@ -3,7 +3,7 @@ import ClearButton from './ClearButton';
 import FilterTablet from './FilterTablet';
 
 
-const SelectedFilters = ({ selectedFilters, isFilters }) => {
+const SelectedFilters = ({ selectedFilters, isFilters, removeFilter }) => {
 
     const getDistinctSelectedFilters = () => {
         /*
@@ -35,7 +35,7 @@ const SelectedFilters = ({ selectedFilters, isFilters }) => {
         component.
         */
         return getDistinctSelectedFilters().map( (selectedFilter, index) => (
-            <FilterTablet key={index} category={selectedFilter.category} skillName={selectedFilter.skillName} />
+            <FilterTablet key={index} category={selectedFilter.category} skillName={selectedFilter.skillName} removeFilter={removeFilter} />
         ))
     }
 
