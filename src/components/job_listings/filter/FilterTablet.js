@@ -3,11 +3,11 @@ import JobSkillTablet from '../desktop/JobSkillTablet.js';
 import RemoveButton from './RemoveButton';
 
 
-const FilterTablet = ({ skillName }) => {
+const FilterTablet = ({ category, skillName, removeFilter }) => {
     return (
         <div class='filter-tablet'>
-            <JobSkillTablet skillName={skillName} />
-            <RemoveButton skillName={skillName} />
+            <JobSkillTablet categore={category} skillName={skillName} />
+            <RemoveButton category={category} skillName={skillName} removeFilter={removeFilter} />
         </div>
     );
 }

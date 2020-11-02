@@ -21,10 +21,26 @@ class App extends Component {
   addFilterToState = (event) => {
     const category = event.target.getAttribute('data-category');
     const skillName = event.target.getAttribute('data-skillName');
+    
     const newSelectedFilters = [...this.state.selectedFilters, {category: category, skillName: skillName}]
-
     const isFilters = newSelectedFilters.length > 0 ? true : false;
+    
     this.setState({selectedFilters: newSelectedFilters, isSelectedFilters: isFilters});
+  }
+
+  removeFilterFromState = (event) => {
+    const selectedFilters = [...this.state.selectedFilters];
+    const targetFilterIndex = selectedFilters.findIndex( (selectedFilter) => (
+      selectedFilter.category === event.target.getAttribute('data-category') &&
+      selectedFilter.skillName === event.target.getAttribute('data-skillName')
+    ));
+
+    if (targetFilterIndex !== -1) {
+      selectedFilters.splice(targetFilterIndex, 1)
+    }
+     
+     const isFilters = selectedFilters.length > 0 ? true : false;
+     this.setState({selectedFilters: selectedFilters, isSelectedFilters: isFilters});
   }
 
   componentDidMount = () => {
@@ -37,7 +53,7 @@ class App extends Component {
     return (
       <div className="App">
         <Banner />
-        <SelectedFilters selectedFilters={this.state.selectedFilters} isFilters={this.state.isSelectedFilters} />
+        <SelectedFilters selectedFilters={this.state.selectedFilters} isFilters={this.state.isSelectedFilters} removeFilter={this.removeFilterFromState} />
         <JobListings jobListings={jobListings} selectFilter={this.addFilterToState} selectedFilters={this.state.selectedFilters} />
 
         <div class="attribution footer">

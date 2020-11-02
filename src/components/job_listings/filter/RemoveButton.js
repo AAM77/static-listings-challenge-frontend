@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const RemoveButton = ({ skillName }) => {
+const RemoveButton = ({ category, skillName, removeFilter }) => {
     return (
-        <div class="remove-button" data-skill={skillName}>
+        <div class="remove-button" data-category={category} data-skillName={skillName} onClick={removeFilter}>
             X
         </div>
     )
