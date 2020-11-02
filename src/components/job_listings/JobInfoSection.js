@@ -18,7 +18,12 @@ const JobInfoSection = ({ jobListing }) => {
     }
 
     const createJobListingTags = () => {
-        return getTagNames().map( (tagName, index) => <JobListingTag key={`${tagName}${jobListing.company}${index}`} tagName={tagName} />);
+        return getTagNames().map( (tagName, index) => (
+        <JobListingTag 
+            key={`${tagName}${jobListing.company}${index}`} 
+            tagName={tagName} 
+        />
+        ))
     }
 
     return (

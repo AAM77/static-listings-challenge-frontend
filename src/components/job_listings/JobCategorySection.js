@@ -29,9 +29,13 @@ const JobCategorySection = ({ jobListing, selectFilter }) => {
     }
 
     const createJobSkillTablets = () => {
-        // NOTE: Need to make keys unique.
+
         return getSkillList().map( (skillObject, index) => {
-            return <JobSkillTablet key={`${skillObject.category}${index}${skillObject.skillName}`} category={skillObject.category} skillName={skillObject.skillName} selectFilter={selectFilter} />
+            return <JobSkillTablet 
+                        key={`${skillObject.category}${index}${skillObject.skillName}`} 
+                        category={skillObject.category} skillName={skillObject.skillName} 
+                        selectFilter={selectFilter} 
+                    />
         })
     }
 
