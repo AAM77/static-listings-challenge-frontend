@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.scss';
 import data from './data/data.json';
 import Banner from './components/layout/Banner';
-import JobListings from './components/job_listings/desktop/JobListings';
-import SelectedFilters from './components/job_listings/filter/SelectedFilters';
+import JobListings from './components/job_listings/JobListings';
+import SelectedFilters from './components/filter/SelectedFilters';
 
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
   addFilterToState = (event) => {
     const category = event.target.getAttribute('data-category');
     const skillName = event.target.getAttribute('data-skillname');
-    
+
     const newSelectedFilters = [...this.state.selectedFilters, {category: category, skillName: skillName}]
     const isFilters = newSelectedFilters.length > 0 ? true : false;
     

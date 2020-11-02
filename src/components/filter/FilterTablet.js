@@ -1,5 +1,5 @@
 import React from 'react';
-import JobSkillTablet from '../desktop/JobSkillTablet.js';
+import JobSkillTablet from '../job_listings/JobSkillTablet.js';
 import RemoveButton from './RemoveButton';
 
 

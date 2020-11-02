@@ -5,7 +5,7 @@ https://static-job-listings-frontend-git-main.aam77.vercel.app/
 
 # Frontend Mentor - Static Listings Challenge
 
-![Design preview for the Job Listings coding challenge](./src/assets/design/desktop-preview.jpg)
+![Design preview for the Job Listings coding challenge](./src/assets/design-preview.jpg)
 
 ## Welcome! 👋
 
