@@ -23,8 +23,6 @@ const SelectedFilters = ({ selectedFilters, isFilters, removeFilter, clearFilter
                 });
             }
         }
-
-        debugger;
         return distinctSelectedFilters;
     }
 
