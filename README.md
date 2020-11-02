@@ -1,3 +1,8 @@
+# I am currently working on this. To check out how the current version of the project looks like, please visit:
+https://static-listings-frontend-awydqsj06.vercel.app/
+
+-------------------------------------------------------------------------------
+
 # Frontend Mentor - Static Listings Challenge
 
 ![Design preview for the Job Listings coding challenge](./src/assets/design/desktop-preview.jpg)
