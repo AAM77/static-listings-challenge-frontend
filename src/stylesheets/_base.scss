@@ -1,0 +1,38 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.google.com/specimen/Spartan");
+
+$roboto: "Roboto", serif;
+$spartan: "Spartan", sans-serif;
+
+$large-desktop: 1440px;
+$small-desktop: 1024px;
+$tablet: 768px;
+$large-phone: 640px;
+$small-phone: 347px;
+
+/* Color Palette */
+
+// Primary Color
+$desaturated-dark-cyan: hsl(180, 29%, 50%);
+
+// Secondary & Tertiary Colors
+$light-grayish-cyan-background: hsl(180, 52%, 96%);
+$light-grayish-cyan-filter-tablet: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+/* Global Styles */
+:root {
+  --primary-color: #dc3545;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
