@@ -16,7 +16,7 @@ function JobCard({ jobListing, selectFilter }) {
     }
 
     return(
-        <div key={jobListing.id} className={componentClass + ' card shadow'}>
+        <div className={componentClass + ' card shadow'}>
             <JobLogo logoPath={jobListing.logo} />
             <JobInfoSection jobListing={jobListing} />
             <JobCategorySection jobListing={jobListing} selectFilter={selectFilter} />
