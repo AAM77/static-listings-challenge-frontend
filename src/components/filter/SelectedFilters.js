@@ -24,6 +24,7 @@ const SelectedFilters = ({ selectedFilters, isFilters, removeFilter, clearFilter
             }
         }
 
+        debugger;
         return distinctSelectedFilters;
     }
 
@@ -35,7 +36,7 @@ const SelectedFilters = ({ selectedFilters, isFilters, removeFilter, clearFilter
         component.
         */
         return getDistinctSelectedFilters().map( (selectedFilter, index) => (
-            <FilterTablet key={`${selectedFilter.skillName}${toString(index)}`} category={selectedFilter.category} skillName={selectedFilter.skillName} removeFilter={removeFilter} />
+            <FilterTablet key={`${selectedFilter.skillName}${index}`} category={selectedFilter.category} skillName={selectedFilter.skillName} removeFilter={removeFilter} />
         ))
     }
 
