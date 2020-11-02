@@ -54,13 +54,29 @@ class App extends Component {
   }
 
   render() {
-    const { jobListings } = this.state;
+    const { 
+      jobListings, 
+      selectedFilters,
+      isSelectedFilters,
+
+    } = this.state;
 
     return (
       <div className="App">
         <Banner />
-        <SelectedFilters selectedFilters={this.state.selectedFilters} isFilters={this.state.isSelectedFilters} removeFilter={this.removeFilterFromState} clearFilters={this.clearSelectedFilters} />
-        <JobListings jobListings={jobListings} selectFilter={this.addFilterToState} selectedFilters={this.state.selectedFilters} />
+        
+        <SelectedFilters 
+          selectedFilters={selectedFilters} 
+          isFilters={isSelectedFilters} 
+          removeFilter={this.removeFilterFromState} 
+          clearFilters={this.clearSelectedFilters} 
+        />
+
+        <JobListings 
+          jobListings={jobListings} 
+          selectFilter={this.addFilterToState} 
+          selectedFilters={selectedFilters} 
+        />
 
         <div className="attribution footer">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">Frontend Mentor</a>. 
