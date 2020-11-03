@@ -44,9 +44,7 @@ class App extends Component {
     const category = event.target.getAttribute('data-category');
     const skillName = event.target.getAttribute('data-skillname');
 
-    const isNotSelected = this.state.selectedFilters.every( selectedFilter => (
-      selectedFilter.category !== category && selectedFilter.skillName !== skillName)
-    );
+    const isNotSelected = this.state.selectedFilters.every( selectedFilter => selectedFilter.skillName !== skillName);
 
     if (isNotSelected) {
       const newSelectedFilters = [...this.state.selectedFilters, {category: category, skillName: skillName}];
