@@ -19,6 +19,8 @@ function JobCard({ jobListing, selectFilter }) {
         <div className={componentClass + ' card shadow'}>
             <JobLogo logoPath={jobListing.logo} />
             <JobInfoSection jobListing={jobListing} />
+
+            <div><hr /></div>
             <JobCategorySection jobListing={jobListing} selectFilter={selectFilter} />
         </div>
     );
