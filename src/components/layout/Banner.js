@@ -1,11 +1,17 @@
 import React from 'react';
-import banner from './bg-header-desktop.svg';
+import desktopBanner from './bg-header-desktop.svg';
+import mobileBanner from './bg-header-mobile.svg';
 
-
-const Banner = () => {
+const Banner = ({ browserWidth }) => { 
     return (
         <div id='banner'>
-            <img src={banner} alt="cyan page banner"></img>
+            {
+                browserWidth > 768 ? 
+                    <img src={desktopBanner} alt="cyan page banner"></img> 
+                :
+                    <img src={mobileBanner} alt="cyan page banner"></img>
+            }
+            
         </div>
     )
 }

@@ -11,6 +11,12 @@ class App extends Component {
     jobListings: data,
     selectedFilters: [], // Should be an array of objects that contain both the category and the skill name.
     isSelectedFilters: false,
+    browserWidth: (window.innerWidth * window.devicePixelRatio),
+  }
+
+  getBrowserWidth = () => {
+    const browserWidth = window.innerWidth * window.devicePixelRatio;
+    this.setState({browserWidth: browserWidth});
   }
 
   setSelectedFiltersStatus = () => {
@@ -51,6 +57,7 @@ class App extends Component {
 
   componentDidMount = () => {
     this.setSelectedFiltersStatus();
+    window.addEventListener('resize', this.getBrowserWidth);
   }
 
   render() {
@@ -63,7 +70,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Banner />
+        <Banner browserWidth={this.state.browserWidth} />
         
         <SelectedFilters 
           selectedFilters={selectedFilters} 
