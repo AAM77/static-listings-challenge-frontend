@@ -1,4 +1,8 @@
-@media only screen and (min-width: 375px) and (max-width: 768px) {
+/* Mohammad Adeel - November 3, 2020.
+Note to self: Re-using all of the code for each .scss file is too wasteful.
+Clean up media queries by moving all similar CSS to a mixin file.
+*/
+@include responsive(phone) {
   /* Utilities */
   .container {
     max-width: 1440px;
@@ -153,7 +157,7 @@
       padding: 7.3px;
       width: auto;
       height: 14.5px;
-      border-radius: 1.9px;
+      border-radius: 3px;
       margin: 9.5px 9.5px 9.5px 0px;
       background: $light-grayish-cyan-background;
 
@@ -204,15 +208,15 @@
         }
 
         .skill-tablet {
-          border-top-left-radius: 1.9px;
-          border-bottom-left-radius: 1.9px;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
           background: $light-grayish-cyan-background;
           color: $desaturated-dark-cyan;
         }
 
         .remove-button {
-          border-top-right-radius: 1.9px;
-          border-bottom-right-radius: 1.9px;
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
           background: $desaturated-dark-cyan;
           color: white;
 
