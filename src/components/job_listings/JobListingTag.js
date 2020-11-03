@@ -4,6 +4,9 @@ import React from 'react';
 const JobListingTag = ({ tagName }) => {
     let componentClass;
 
+    /* Mohammad Adeel - November 3, 2020. Adds
+    the relevant class to each JobListingTags, depending
+    on wheter it is new or featured. */
     switch (tagName) {
         case 'NEW!':
             componentClass = 'new'
@@ -16,7 +19,7 @@ const JobListingTag = ({ tagName }) => {
     }
 
     return (
-        <div className={componentClass + ' job-listing-tag'}>
+        <div className={`${componentClass} job-listing-tag`}>
             <span>{tagName}</span>
         </div>
     )
