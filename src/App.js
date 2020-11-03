@@ -44,10 +44,16 @@ class App extends Component {
     const category = event.target.getAttribute('data-category');
     const skillName = event.target.getAttribute('data-skillname');
 
-    const newSelectedFilters = [...this.state.selectedFilters, {category: category, skillName: skillName}]
-    const isFilters = newSelectedFilters.length > 0 ? true : false;
+    const isNotSelected = this.state.selectedFilters.every( selectedFilter => (
+      selectedFilter.category !== category && selectedFilter.skillName !== skillName)
+    );
+
+    if (isNotSelected) {
+      const newSelectedFilters = [...this.state.selectedFilters, {category: category, skillName: skillName}];
+      const isFilters = newSelectedFilters.length > 0 ? true : false;
+      this.setState({selectedFilters: newSelectedFilters, isSelectedFilters: isFilters});
+    }
     
-    this.setState({selectedFilters: newSelectedFilters, isSelectedFilters: isFilters});
   }
 
   removeFilterFromState = (event) => {
