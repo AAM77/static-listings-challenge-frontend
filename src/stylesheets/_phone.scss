@@ -1,4 +1,4 @@
-@media only screen and (max-width: 375px) {
+@media only screen and (min-width: 375px) and (max-width: 768px) {
   /* Utilities */
   .container {
     max-width: 1440px;
@@ -35,11 +35,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     background: white;
-    padding: 0.5rem 0.6rem 0.5rem 0.6rem;
+    padding: 1rem 1.5rem 1rem 1rem;
     border-radius: 7px;
     max-height: 100%;
     max-width: 100%;
-    margin-bottom: 1.6rem;
+    margin-bottom: 3.5rem;
   }
 
   .featured-listing {
@@ -56,7 +56,7 @@
     img {
       position: absolute;
       transform: translateY(-75%);
-      width: 30px;
+      width: 66px;
     }
   }
 
@@ -64,8 +64,9 @@
     display: flex;
     flex-basis: 4;
     max-width: 100%;
-    margin-top: 0.75rem;
+    margin-top: 1.75rem;
     margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
     justify-content: space-evenly;
     flex-direction: column;
 
@@ -73,11 +74,11 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
 
       .company {
-        font-size: 0.42rem;
-        font-weight: 500;
+        font-size: 0.825rem;
+        font-weight: 700;
         color: $desaturated-dark-cyan;
       }
 
@@ -97,7 +98,7 @@
 
         .job-listing-tag {
           height: auto;
-          font-size: 0.2rem;
+          font-size: 0.75rem;
           border-radius: 100px;
           margin-left: 10px;
           padding: 4px 10px 4px 10px;
@@ -112,9 +113,9 @@
     }
 
     .position {
-      font-size: 0.75rem;
-      font-weight: 534;
-      margin-bottom: 0.5rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
       color: $very-dark-grayish-cyan;
 
       &:hover {
@@ -124,14 +125,14 @@
     }
 
     .additional-details {
-      font-size: 0.55rem;
+      font-size: 0.825rem;
       font-weight: 500;
       color: $dark-grayish-cyan;
     }
 
     .interpunct {
       margin: 0px 19px 0px 19px;
-      font-weight: 687;
+      font-weight: 800;
     }
   }
 
@@ -146,8 +147,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.42rem;
-      font-weight: 534;
+      font-size: 0.825rem;
+      font-weight: 700;
       color: $desaturated-dark-cyan;
       padding: 7.3px;
       width: auto;
@@ -195,8 +196,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 0.42rem;
-          font-weight: 534;
+          font-size: 0.825rem;
+          font-weight: 700;
           padding: 7.3px;
           width: auto;
           height: 14.5px;
@@ -232,7 +233,7 @@
     width: auto;
     height: auto;
     font-family: $spartan;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: $very-dark-grayish-cyan;
 
