@@ -37,6 +37,34 @@ $very-dark-grayish-cyan: hsl(180, 14%, 20%);
   padding: 0;
 }
 
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+html,
 body {
-  border: 1px solid transparent;
+  height: 100%;
+  position: relative;
+}
+
+.App {
+  background: $light-grayish-cyan-background;
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+
+  .attribution.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.hidden {
+  display: none;
 }
