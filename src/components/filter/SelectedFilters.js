@@ -5,27 +5,6 @@ import FilterTablet from './FilterTablet';
 
 const SelectedFilters = ({ selectedFilters, isFilters, removeFilter, clearFilters }) => {
 
-    const getDistinctSelectedFilters = () => {
-        /*
-        Mohammad Adeel - November 1, 2020
-        Uses the selectedFilters from the state to return a list of unique filter selections.
-        This is useful for preventing (1) unnecessary calculations and processing, & (2) duplicate
-        entries from displaying in the SelectedFilters component.
-        */
-        const distinctSelectedFilters = [];
-        const mappedFilters = new Map();
-        for (const selectedFilter of selectedFilters) {
-            if(!mappedFilters.has(selectedFilter.skillName)){
-                mappedFilters.set(selectedFilter.skillName, true);    // set any value to Map
-                distinctSelectedFilters.push({
-                    category: selectedFilter.category,
-                    skillName: selectedFilter.skillName
-                });
-            }
-        }
-        return distinctSelectedFilters;
-    }
-
     const addFilterTablets = () => {
         /*
         Mohammad Adeel - November 1, 2020
@@ -33,7 +12,7 @@ const SelectedFilters = ({ selectedFilters, isFilters, removeFilter, clearFilter
         to create and return a list of FilterTablet components, which get added to the SelectedFilters
         component.
         */
-        return getDistinctSelectedFilters().map( (selectedFilter, index) => (
+        return selectedFilters.map( (selectedFilter, index) => (
             <FilterTablet 
                 key={`${selectedFilter.skillName}${index}`} 
                 category={selectedFilter.category} 
