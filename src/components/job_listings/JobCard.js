@@ -7,6 +7,9 @@ import JobCategorySection from './JobCategorySection';
 function JobCard({ jobListing, selectFilter }) {
     let componentClass = '';
 
+    /* Mohammad Adeel - November 3, 2020. Adds the
+    'featured-listing' class if the jobListing
+    is listed as featured (is true). */
     switch (jobListing.featured) {
         case true:
             componentClass = 'featured-listing';
@@ -16,7 +19,7 @@ function JobCard({ jobListing, selectFilter }) {
     }
 
     return(
-        <div className={componentClass + ' card shadow'}>
+        <div className={`${componentClass} card shadow`}>
             <JobLogo logoPath={jobListing.logo} />
             <JobInfoSection jobListing={jobListing} />
 

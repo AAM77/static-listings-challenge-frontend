@@ -5,6 +5,10 @@ import JobListingTag from './JobListingTag';
 const JobInfoSection = ({ jobListing }) => {
 
     const getTagNames = () => {
+        /* Mohammad Adeel - November 3, 2020.
+        Dynamically create a list/an array of tag names.
+        This list gets used to create JobListingTag 
+        components for them. */
         const tagNames = [];
         if (jobListing.new) {
             tagNames.push('NEW!');

@@ -3,13 +3,13 @@ import JobSkillTablet from './JobSkillTablet';
 
 
 const JobCategorySection = ({ jobListing, selectFilter }) => {
-    // Loop through the keys (Object.entries(jobListing)).
-    // If the keys are in the list ['role', 'level', 'languages', 'tools']
-        // If the key is languages or tools:
-            // iterate through the array and create a JobSkillTablet for it and pass in the array item as the prop
-        // else create a JobSkillTablet for it with the key as the prop.
-
+   
     const getSkillList = () => {
+        /* Mohammad Adeel - November 3, 2020.
+        Dynamically retrieve and output a list/array of
+        all of the skill names and the categories they belong to.
+        Used to create JobSkillTablet components.
+        */
         const skillList = [];
 
         Object.entries(jobListing).forEach( ([category, skillSet]) => {
