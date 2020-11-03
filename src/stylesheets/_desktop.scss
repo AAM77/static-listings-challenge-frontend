@@ -1,4 +1,8 @@
-@media only screen and (min-width: 1350px) {
+/* Mohammad Adeel - November 3, 2020.
+Note to self: Re-using all of the code for each .scss file is too wasteful.
+Clean up media queries by moving all similar CSS to a mixin file.
+*/
+@include responsive(desktop) {
   /* Utilities */
   .container {
     max-width: 1440px;

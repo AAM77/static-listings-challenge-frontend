@@ -1,4 +1,8 @@
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
+/* Mohammad Adeel - November 3, 2020.
+Note to self: Re-using all of the code for each .scss file is too wasteful.
+Clean up media queries by moving all similar CSS to a mixin file.
+*/
+@include responsive(tab-port) {
   /* Utilities */
   .container {
     max-width: 1440px;
@@ -35,7 +39,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     background: white;
-    padding: 1rem 1.6rem 1rem 1.6rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     border-radius: 7px;
     max-height: 100%;
     max-width: 100%;
@@ -64,7 +68,7 @@
     display: flex;
     flex-basis: 4;
     max-width: 100%;
-    margin-top: 1.75rem;
+    margin-top: 1.6rem;
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
     justify-content: space-evenly;
