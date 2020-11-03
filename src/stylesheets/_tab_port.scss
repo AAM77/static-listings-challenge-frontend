@@ -52,20 +52,20 @@
   }
 
   .logo {
-    width: 20%;
-    height: 20%;
+    position: absolute;
+    transform: translateY(-240%);
 
     .image-container {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 10px;
-      width: 10px;
+      height: 100%;
+      width: 100%;
     }
 
     img {
-      width: 10px;
-      height: 10px;
+      width: 30px;
+      height: auto;
     }
   }
 
@@ -73,6 +73,7 @@
     display: flex;
     flex-basis: 4;
     max-width: 100%;
+    margin-top: 0.75rem;
     margin-bottom: 0.5rem;
     justify-content: space-evenly;
     flex-direction: column;
@@ -120,7 +121,7 @@
     }
 
     .position {
-      font-size: 0.57rem;
+      font-size: 0.75rem;
       font-weight: 534;
       margin-bottom: 0.5rem;
       color: $very-dark-grayish-cyan;
