@@ -3,25 +3,6 @@ Note to self: Re-using all of the code for each .scss file is too wasteful.
 Clean up media queries by moving all similar CSS to a mixin file.
 */
 @include responsive(desktop) {
-  /* Utilities */
-  .container {
-    max-width: 1440px;
-    margin: auto;
-    padding: 0 2rem;
-  }
-
-  .App {
-    background: $light-grayish-cyan-background;
-
-    .attribution.footer {
-      padding: 1rem;
-    }
-  }
-
-  .hidden {
-    display: none;
-  }
-
   #banner {
     background: $desaturated-dark-cyan;
     margin-bottom: 6rem;
@@ -49,7 +30,7 @@ Clean up media queries by moving all similar CSS to a mixin file.
 
   .filter-display-card {
     position: relative;
-    transform: translateY(-135%);
+    transform: translateY(-120%);
     display: flex;
     flex-wrap: wrap;
     background: white;
@@ -245,5 +226,9 @@ Clean up media queries by moving all similar CSS to a mixin file.
         color: white;
       }
     }
+  }
+
+  hr {
+    display: none;
   }
 }
