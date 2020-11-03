@@ -3,7 +3,6 @@
   .container {
     max-width: 1440px;
     margin: auto;
-    overflow: hidden;
     padding: 0 2rem;
   }
 
@@ -21,7 +20,7 @@
 
   #banner {
     background: $desaturated-dark-cyan;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 
     img {
       max-height: 100%;
@@ -40,7 +39,13 @@
     margin-bottom: 2.5rem;
   }
 
+  #selected-filters-container {
+    height: 30px;
+  }
+
   .filter-display-card {
+    position: relative;
+    transform: translateY(-135%);
     display: flex;
     flex-wrap: wrap;
     background: white;

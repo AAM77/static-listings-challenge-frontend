@@ -32,7 +32,11 @@ $very-dark-grayish-cyan: hsl(180, 14%, 20%);
 }
 
 * {
-  box-sizing: border-box;
+  font-family: $spartan;
   margin: 0;
   padding: 0;
+}
+
+body {
+  border: 1px solid transparent;
 }
