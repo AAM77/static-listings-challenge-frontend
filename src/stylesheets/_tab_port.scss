@@ -3,7 +3,6 @@
   .container {
     max-width: 1440px;
     margin: auto;
-    overflow: hidden;
     padding: 0 2rem;
   }
 
@@ -40,7 +39,7 @@
     border-radius: 7px;
     max-height: 100%;
     max-width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
   }
 
   .featured-listing {
@@ -52,20 +51,12 @@
   }
 
   .logo {
-    position: absolute;
-    transform: translateY(-240%);
-
-    .image-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-    }
+    position: relative;
 
     img {
+      position: absolute;
+      transform: translateY(-75%);
       width: 30px;
-      height: auto;
     }
   }
 
