@@ -104,9 +104,11 @@ Clean up media queries by moving all similar CSS to a mixin file.
       margin-bottom: 0.5rem;
       color: $very-dark-grayish-cyan;
 
-      &:hover {
-        cursor: pointer;
-        color: $desaturated-dark-cyan;
+      span.position-text {
+        &:hover {
+          cursor: pointer;
+          color: $desaturated-dark-cyan;
+        }
       }
     }
 
