@@ -104,7 +104,7 @@ class App extends Component {
 
   setJobListings = async () => {
     /* Mohammad Adeel - November 11, 2020. Retrieves the job listings from the API */
-    await fetch('http://127.0.0.1:8000/api/')
+    await fetch('https://listings-backend.herokuapp.com/api/')
     .then( res => res.json())
     .then( data => { 
       this.setState({jobListings: data})
