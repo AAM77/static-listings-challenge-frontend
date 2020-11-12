@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.scss';
-import data from './data/data.json';
 import Banner from './components/layout/Banner';
 import JobListings from './components/job_listings/JobListings';
 import SelectedFilters from './components/filter/SelectedFilters';
@@ -8,7 +7,7 @@ import SelectedFilters from './components/filter/SelectedFilters';
 
 class App extends Component {
   state = {
-    jobListings: data,
+    jobListings: [],
     selectedFilters: [], // Should be an array of objects that contain both the category and the skill name.
     isSelectedFilters: false,
     browserWidth: null,
@@ -103,9 +102,20 @@ class App extends Component {
     this.setState({selectedFilters: selectedFilters, isSelectedFilters: this.isFilters(selectedFilters)});
   }
 
-  componentDidMount = () => {
+  setJobListings = async () => {
+    /* Mohammad Adeel - November 11, 2020. Retrieves the job listings from the API */
+    await fetch('http://127.0.0.1:8000/api/')
+    .then( res => res.json())
+    .then( data => { 
+      this.setState({jobListings: data})
+    })
+    .catch( res => console.log(res))
+  }
+
+  componentDidMount = async () => {
     /* Mohammad Adeel - November 3, 2020. Sets initial values and
     adds eventhandlers to the DOM. */
+    await this.setJobListings();
     this.setSelectedFiltersStatus();
     this.setBrowserWidth();
     window.addEventListener('resize', this.setBrowserWidth);
