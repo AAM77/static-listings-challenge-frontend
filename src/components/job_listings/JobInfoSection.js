@@ -40,9 +40,9 @@ const JobInfoSection = ({ jobListing }) => {
                     {createJobListingTags()}
                 </div>
             </div>
-            <div className='position'><span class='position-text'>{jobListing.position}</span></div>
+            <div className='position'><span className='position-text'>{jobListing.position}</span></div>
             <div className='additional-details'>
-                {jobListing.postedAt}<span className='interpunct'>·</span>{jobListing.contract}<span className='interpunct'>·</span>{jobListing.location}
+                {jobListing.posted_at}<span className='interpunct'>·</span>{jobListing.contract}<span className='interpunct'>·</span>{jobListing.location}
             </div>
         </div>
     )
