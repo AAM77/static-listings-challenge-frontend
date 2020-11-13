@@ -135,6 +135,7 @@ Clean up media queries by moving all similar CSS to a mixin file.
       display: flex;
       align-items: center;
       justify-content: center;
+      white-space: nowrap;
       font-size: 1.1rem;
       font-weight: 700;
       color: $desaturated-dark-cyan;
@@ -184,6 +185,7 @@ Clean up media queries by moving all similar CSS to a mixin file.
           display: flex;
           align-items: center;
           justify-content: center;
+          white-space: nowrap;
           font-size: 1.1rem;
           font-weight: 700;
           padding: 7.3px;
